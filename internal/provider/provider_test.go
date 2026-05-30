@@ -4,6 +4,7 @@ import (
 	"context"
 	"testing"
 
+	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
 )
 
@@ -34,5 +35,27 @@ func TestProviderSchema(t *testing.T) {
 
 	if resp.Schema.Attributes != nil {
 		t.Fatalf("expected no provider attributes, got %d", len(resp.Schema.Attributes))
+	}
+}
+
+func TestProviderDataSources(t *testing.T) {
+	t.Parallel()
+
+	p := New("test")()
+	dataSources := p.DataSources(context.Background())
+
+	if len(dataSources) != 1 {
+		t.Fatalf("expected 1 data source, got %d", len(dataSources))
+	}
+
+	var resp provider.MetadataResponse
+	p.Metadata(context.Background(), provider.MetadataRequest{}, &resp)
+
+	ds := dataSources[0]()
+	var dsResp datasource.MetadataResponse
+	ds.Metadata(context.Background(), datasource.MetadataRequest{ProviderTypeName: resp.TypeName}, &dsResp)
+
+	if dsResp.TypeName != "tensorflow_program" {
+		t.Fatalf("expected tensorflow_program data source, got %q", dsResp.TypeName)
 	}
 }

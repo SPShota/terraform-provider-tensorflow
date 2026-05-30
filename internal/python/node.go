@@ -65,3 +65,11 @@ func ExpressionStatement(expr Expression) (Statement, error) {
 
 	return Statement{code: expr.code}, nil
 }
+
+func RawStatement(code string) (Statement, error) {
+	if code == "" {
+		return Statement{}, fmt.Errorf("statement code must not be empty")
+	}
+
+	return Statement{code: code}, nil
+}
