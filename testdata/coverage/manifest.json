@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "source_module": "tensorflow",
+  "source_version": "fake",
+  "generated_by": "test",
+  "root": "tf",
+  "documentation_base": "https://www.tensorflow.org/api_docs/python",
+  "symbols": [
+    {
+      "path": "tf",
+      "kind": "module"
+    },
+    {
+      "path": "tf.constant",
+      "kind": "function"
+    },
+    {
+      "path": "tf.missing",
+      "kind": "function"
+    },
+    {
+      "path": "tf.raw_ops",
+      "kind": "module"
+    },
+    {
+      "path": "tf.raw_ops.AddV2",
+      "kind": "function"
+    }
+  ]
+}

@@ -20,6 +20,7 @@ The recommended flow is:
 - [`tf.data`](data.md)
 - [Additional TensorFlow Namespaces](namespaces.md)
 - [Raw Ops](raw-ops.md)
+- [API Coverage](coverage.md)
 - [Blocks And Functions](blocks.md)
 - [`tf_program`](program.md)
 - [Validation](validation.md)

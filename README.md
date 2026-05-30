@@ -112,6 +112,12 @@ go run ./cmd/tftf-wrappergen generate \
   -output internal/provider/generated_data_sources.go
 ```
 
+Generate an API coverage report:
+
+```sh
+go run ./cmd/tftf-coverage report -input tf-manifest.json -output coverage.md
+```
+
 Run the provider directly to verify that it compiles:
 
 ```sh

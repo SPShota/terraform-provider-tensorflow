@@ -25,6 +25,10 @@ type wrapperDataSource struct {
 	spec WrapperDataSourceSpec
 }
 
+func (d *wrapperDataSource) WrapperSpec() WrapperDataSourceSpec {
+	return d.spec
+}
+
 type wrapperDataSourceModel struct {
 	Args       types.List   `tfsdk:"args"`
 	Kwargs     types.Map    `tfsdk:"kwargs"`
