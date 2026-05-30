@@ -16,6 +16,7 @@ The recommended flow is:
 - [Basic Example](basic.md)
 - [Expressions](expressions.md)
 - [`tf_program`](program.md)
+- [Validation](validation.md)
 - [Internal Python IR](python-ir.md)
 
 ## Data Sources
