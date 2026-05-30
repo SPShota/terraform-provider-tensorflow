@@ -44,7 +44,7 @@ func TestProviderDataSources(t *testing.T) {
 	p := New("test")()
 	dataSources := p.DataSources(context.Background())
 
-	expectedCount := 9 + len(GeneratedDataSources())
+	expectedCount := 10 + len(GeneratedDataSources())
 	if len(dataSources) != expectedCount {
 		t.Fatalf("expected %d data sources, got %d", expectedCount, len(dataSources))
 	}
@@ -69,6 +69,7 @@ func TestProviderDataSources(t *testing.T) {
 		"tensorflow_return",
 		"tensorflow_with",
 		"tensorflow_function",
+		"tensorflow_raw_op",
 		"tensorflow_program",
 		"tensorflow_constant",
 		"tensorflow_reshape",

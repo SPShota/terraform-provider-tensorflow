@@ -155,6 +155,32 @@ func TestWithProgramCompilesWithPython(t *testing.T) {
 	compilePython(t, content)
 }
 
+func TestRawOpsProgramCompilesWithPython(t *testing.T) {
+	t.Parallel()
+
+	left := mustSyntaxLiteral(t, 1)
+	right := mustSyntaxLiteral(t, 2)
+	rawOp, err := CallNamed("tf.raw_ops.AddV2", nil, []KeywordArgument{
+		{Name: "x", Value: left},
+		{Name: "y", Value: right},
+	})
+	if err != nil {
+		t.Fatalf("CallNamed() returned error: %v", err)
+	}
+
+	assign, err := Assign("sum_value", rawOp)
+	if err != nil {
+		t.Fatalf("Assign() returned error: %v", err)
+	}
+
+	content, err := Program{Statements: []Statement{assign}}.Render()
+	if err != nil {
+		t.Fatalf("Render() returned error: %v", err)
+	}
+
+	compilePython(t, content)
+}
+
 func compilePython(t *testing.T, content string) {
 	t.Helper()
 
