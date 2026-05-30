@@ -28,5 +28,6 @@ go run ./cmd/tftf-wrappergen generate \
   -output internal/provider/generated_data_sources.go
 ```
 
-This PR adds the generator and generic wrapper runtime. Later PRs will check in
-generated wrappers for selected TensorFlow namespaces.
+Generated wrappers for selected TensorFlow namespaces are checked in under the
+provider package. Use [API Coverage](coverage.md) to see which manifest symbols
+have dedicated wrappers.

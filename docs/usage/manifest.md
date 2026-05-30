@@ -1,8 +1,8 @@
 # API Manifest
 
 `tftf-manifest` generates a JSON manifest from an installed TensorFlow Python
-module. Later PRs use this manifest to generate thin Terraform data source
-wrappers for TensorFlow APIs.
+module. The wrapper generator and coverage reporter use this manifest to track
+TensorFlow API support.
 
 Generate a manifest:
 
@@ -33,5 +33,6 @@ The default documentation base is:
 https://www.tensorflow.org/api_docs/python
 ```
 
-This PR adds the generator and schema only. Provider wrappers are generated in a
-later PR.
+Use [Wrapper Generation](wrapper-generation.md) to turn a manifest into provider
+wrapper source, and [API Coverage](coverage.md) to compare a manifest with the
+registered wrappers.
