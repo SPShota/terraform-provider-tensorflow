@@ -98,4 +98,8 @@ Keras wrappers are documented separately in [Keras](keras.md).
 
 `tf.data` wrappers are documented separately in [`tf.data`](data.md).
 
+Additional namespace wrappers for `tf.random`, `tf.image`, `tf.io`, `tf.audio`,
+`tf.strings`, `tf.sparse`, and `tf.ragged` are documented in
+[Additional TensorFlow Namespaces](namespaces.md).
+
 Use `tensorflow_call` for APIs that do not have generated wrappers yet.
