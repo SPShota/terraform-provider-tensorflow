@@ -18,4 +18,12 @@ python3 -m py_compile generated.py
 ```
 
 Runtime validation that imports TensorFlow and executes generated code will be
-added separately as an opt-in integration test.
+is available as an opt-in integration test:
+
+```sh
+TF_TF_INTEGRATION=1 go test ./internal/integration/...
+```
+
+The integration test skips when TensorFlow is not importable from `python3`.
+Install TensorFlow in the Python environment used by `python3` before running it
+when you want runtime coverage.

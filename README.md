@@ -76,6 +76,14 @@ test -z "$(gofmt -l .)"
 The test suite includes Python syntax checks for generated programs. It uses
 `python3 -m py_compile`, so Python 3 must be available on `PATH`.
 
+Run the opt-in TensorFlow runtime integration test:
+
+```sh
+TF_TF_INTEGRATION=1 go test ./internal/integration/...
+```
+
+This imports TensorFlow from `python3` and executes a generated program.
+
 Run the provider directly to verify that it compiles:
 
 ```sh
