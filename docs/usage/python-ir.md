@@ -3,6 +3,9 @@
 PR2 introduces the internal Go package that later Terraform data sources will use
 to generate Python code.
 
+Most users should start with [Basic Example](basic.md). This page documents the
+internal Go package used by provider data sources.
+
 The package intentionally has no Terraform dependency. It models the smallest
 Python fragments needed by upcoming data sources:
 

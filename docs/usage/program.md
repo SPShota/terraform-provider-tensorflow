@@ -2,6 +2,9 @@
 
 `tf_program` joins Python statements into a TensorFlow Python program.
 
+For expression-based code generation, see [Expressions](expressions.md). For an
+end-to-end file output workflow, see [Basic Example](basic.md).
+
 ```hcl
 data "tensorflow_program" "main" {
   statements = [
@@ -54,5 +57,16 @@ data "tensorflow_program" "main" {
   statements = [
     "print(tf.__version__)",
   ]
+}
+```
+
+## Writing To A File
+
+Use `local_file` or another Terraform resource to write `content` to disk.
+
+```hcl
+resource "local_file" "generated" {
+  filename = "${path.module}/generated.py"
+  content  = data.tensorflow_program.main.content
 }
 ```

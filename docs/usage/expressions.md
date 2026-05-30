@@ -3,6 +3,8 @@
 TF.tf expression data sources build Python expressions and statements that can
 be passed to `tensorflow_program`.
 
+See [Basic Example](basic.md) for an end-to-end `local_file` workflow.
+
 Terraform data source type names use the provider prefix:
 
 - `tensorflow_literal`
