@@ -33,6 +33,7 @@ The recommended flow is:
 - [Wrapper Generation](wrapper-generation.md)
 - [API Coverage](coverage.md)
 - [CLI Tools](cli.md)
+- [Release](release.md)
 
 ## Project Notes
 
