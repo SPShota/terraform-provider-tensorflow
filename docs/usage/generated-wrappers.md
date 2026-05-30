@@ -96,4 +96,6 @@ Math wrappers:
 
 Keras wrappers are documented separately in [Keras](keras.md).
 
+`tf.data` wrappers are documented separately in [`tf.data`](data.md).
+
 Use `tensorflow_call` for APIs that do not have generated wrappers yet.

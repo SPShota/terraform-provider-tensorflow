@@ -17,6 +17,7 @@ The recommended flow is:
 - [Expressions](expressions.md)
 - [Generated Wrappers](generated-wrappers.md)
 - [Keras](keras.md)
+- [`tf.data`](data.md)
 - [Blocks And Functions](blocks.md)
 - [`tf_program`](program.md)
 - [Validation](validation.md)
