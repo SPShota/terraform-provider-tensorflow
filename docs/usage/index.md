@@ -18,6 +18,7 @@ The recommended flow is:
 - [`tf_program`](program.md)
 - [Validation](validation.md)
 - [API Manifest](manifest.md)
+- [Wrapper Generation](wrapper-generation.md)
 - [Internal Python IR](python-ir.md)
 
 ## Data Sources
