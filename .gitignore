@@ -11,3 +11,5 @@ crash.*.log
 bin/
 dist/
 coverage.out
+
+examples/**/generated.py
