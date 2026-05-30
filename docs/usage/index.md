@@ -19,6 +19,7 @@ The recommended flow is:
 - [Keras](keras.md)
 - [`tf.data`](data.md)
 - [Additional TensorFlow Namespaces](namespaces.md)
+- [Raw Ops](raw-ops.md)
 - [Blocks And Functions](blocks.md)
 - [`tf_program`](program.md)
 - [Validation](validation.md)

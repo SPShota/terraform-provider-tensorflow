@@ -11,6 +11,7 @@ The examples show progressively richer ways to generate TensorFlow Python code.
 | [keras](keras) | Keras Sequential model, compile, and summary generation. |
 | [data](data) | `tf.data.Dataset` creation and pipeline method chaining. |
 | [namespaces](namespaces) | `tf.random`, `tf.image`, `tf.io`, `tf.audio`, `tf.strings`, `tf.sparse`, and `tf.ragged` wrappers. |
+| [raw-ops](raw-ops) | Generic `tf.raw_ops` calls. |
 | [blocks](blocks) | Function definitions, `tf.function`, and `tf.GradientTape` blocks. |
 | [basic](basic) | End-to-end source generation into `generated.py`. |
 

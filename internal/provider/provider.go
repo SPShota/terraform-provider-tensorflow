@@ -45,6 +45,7 @@ func (p *tensorflowProvider) DataSources(_ context.Context) []func() datasource.
 		NewReturnDataSource,
 		NewWithDataSource,
 		NewFunctionDataSource,
+		NewRawOpDataSource,
 		NewProgramDataSource,
 	}
 
