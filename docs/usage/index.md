@@ -15,6 +15,7 @@ The recommended flow is:
 
 - [Basic Example](basic.md)
 - [Expressions](expressions.md)
+- [Generated Wrappers](generated-wrappers.md)
 - [`tf_program`](program.md)
 - [Validation](validation.md)
 - [API Manifest](manifest.md)

@@ -12,6 +12,10 @@ TensorFlow Python code:
 - `tensorflow_assign`
 - `tensorflow_program`
 
+It also includes generated wrappers for an initial TensorFlow tensor/array/math
+subset, such as `tensorflow_constant`, `tensorflow_reshape`, and
+`tensorflow_math_reduce_sum`.
+
 Generated code can be written to disk with Terraform resources such as
 `local_file`.
 

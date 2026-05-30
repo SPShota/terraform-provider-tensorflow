@@ -1,0 +1,61 @@
+package provider
+
+import (
+	"context"
+	"testing"
+
+	"github.com/hashicorp/terraform-plugin-framework/datasource"
+)
+
+func TestGeneratedDataSources(t *testing.T) {
+	t.Parallel()
+
+	dataSources := GeneratedDataSources()
+	if len(dataSources) != 39 {
+		t.Fatalf("len(GeneratedDataSources()) = %d, want 39", len(dataSources))
+	}
+
+	got := make(map[string]struct{}, len(dataSources))
+	for _, newDataSource := range dataSources {
+		ds := newDataSource()
+		var resp datasource.MetadataResponse
+		ds.Metadata(context.Background(), datasource.MetadataRequest{ProviderTypeName: "tensorflow"}, &resp)
+		got[resp.TypeName] = struct{}{}
+	}
+
+	for _, name := range []string{
+		"tensorflow_constant",
+		"tensorflow_convert_to_tensor",
+		"tensorflow_cast",
+		"tensorflow_reshape",
+		"tensorflow_concat",
+		"tensorflow_stack",
+		"tensorflow_math_reduce_sum",
+		"tensorflow_math_reduce_mean",
+		"tensorflow_math_add",
+		"tensorflow_zeros",
+		"tensorflow_ones",
+	} {
+		if _, ok := got[name]; !ok {
+			t.Fatalf("expected generated data source %q; got %#v", name, got)
+		}
+	}
+}
+
+func TestGeneratedWrapperSchema(t *testing.T) {
+	t.Parallel()
+
+	ds := GeneratedDataSources()[3]()
+	var resp datasource.SchemaResponse
+	ds.Schema(context.Background(), datasource.SchemaRequest{}, &resp)
+
+	if resp.Schema.MarkdownDescription == "" {
+		t.Fatalf("expected generated wrapper schema description")
+	}
+
+	for _, name := range []string{"args", "kwargs", "expression", "statement"} {
+		if _, ok := resp.Schema.Attributes[name]; !ok {
+			t.Fatalf("schema is missing %q attribute", name)
+		}
+	}
+}
