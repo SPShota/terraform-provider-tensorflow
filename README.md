@@ -14,7 +14,8 @@ TensorFlow Python code:
 
 It also includes generated wrappers for an initial TensorFlow tensor/array/math
 subset, such as `tensorflow_constant`, `tensorflow_reshape`, and
-`tensorflow_math_reduce_sum`.
+`tensorflow_math_reduce_sum`, plus block helpers for functions and context
+managers such as `tensorflow_function` and `tensorflow_with`.
 
 Generated code can be written to disk with Terraform resources such as
 `local_file`.

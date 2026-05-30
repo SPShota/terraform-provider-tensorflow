@@ -11,8 +11,8 @@ func TestGeneratedDataSources(t *testing.T) {
 	t.Parallel()
 
 	dataSources := GeneratedDataSources()
-	if len(dataSources) != 39 {
-		t.Fatalf("len(GeneratedDataSources()) = %d, want 39", len(dataSources))
+	if len(dataSources) != 42 {
+		t.Fatalf("len(GeneratedDataSources()) = %d, want 42", len(dataSources))
 	}
 
 	got := make(map[string]struct{}, len(dataSources))
@@ -33,6 +33,9 @@ func TestGeneratedDataSources(t *testing.T) {
 		"tensorflow_math_reduce_sum",
 		"tensorflow_math_reduce_mean",
 		"tensorflow_math_add",
+		"tensorflow_variable",
+		"tensorflow_gradient_tape",
+		"tensorflow_module",
 		"tensorflow_zeros",
 		"tensorflow_ones",
 	} {

@@ -42,6 +42,9 @@ func (p *tensorflowProvider) DataSources(_ context.Context) []func() datasource.
 		NewAttrDataSource,
 		NewCallDataSource,
 		NewAssignDataSource,
+		NewReturnDataSource,
+		NewWithDataSource,
+		NewFunctionDataSource,
 		NewProgramDataSource,
 	}
 
