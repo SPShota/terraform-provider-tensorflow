@@ -11,8 +11,8 @@ func TestGeneratedDataSources(t *testing.T) {
 	t.Parallel()
 
 	dataSources := GeneratedDataSources()
-	if len(dataSources) != 42 {
-		t.Fatalf("len(GeneratedDataSources()) = %d, want 42", len(dataSources))
+	if len(dataSources) != 69 {
+		t.Fatalf("len(GeneratedDataSources()) = %d, want 69", len(dataSources))
 	}
 
 	got := make(map[string]struct{}, len(dataSources))
@@ -36,6 +36,14 @@ func TestGeneratedDataSources(t *testing.T) {
 		"tensorflow_variable",
 		"tensorflow_gradient_tape",
 		"tensorflow_module",
+		"tensorflow_keras_sequential",
+		"tensorflow_keras_model",
+		"tensorflow_keras_input",
+		"tensorflow_keras_layers_dense",
+		"tensorflow_keras_layers_dropout",
+		"tensorflow_keras_optimizers_adam",
+		"tensorflow_keras_losses_sparse_categorical_crossentropy",
+		"tensorflow_keras_metrics_sparse_categorical_accuracy",
 		"tensorflow_zeros",
 		"tensorflow_ones",
 	} {

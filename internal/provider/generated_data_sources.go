@@ -78,6 +78,195 @@ func GeneratedDataSources() []func() datasource.DataSource {
 		},
 		func() datasource.DataSource {
 			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_input",
+				Function:       "tf.keras.Input",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/Input",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_layers_activation",
+				Function:       "tf.keras.layers.Activation",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/layers/Activation",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_layers_batch_normalization",
+				Function:       "tf.keras.layers.BatchNormalization",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/layers/BatchNormalization",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_layers_conv2_d",
+				Function:       "tf.keras.layers.Conv2D",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/layers/Conv2D",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_layers_dense",
+				Function:       "tf.keras.layers.Dense",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dense",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_layers_dropout",
+				Function:       "tf.keras.layers.Dropout",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dropout",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_layers_embedding",
+				Function:       "tf.keras.layers.Embedding",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/layers/Embedding",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_layers_flatten",
+				Function:       "tf.keras.layers.Flatten",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/layers/Flatten",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_layers_global_average_pooling2_d",
+				Function:       "tf.keras.layers.GlobalAveragePooling2D",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/layers/GlobalAveragePooling2D",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_layers_input_layer",
+				Function:       "tf.keras.layers.InputLayer",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/layers/InputLayer",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_layers_lstm",
+				Function:       "tf.keras.layers.LSTM",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/layers/LSTM",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_layers_max_pooling2_d",
+				Function:       "tf.keras.layers.MaxPooling2D",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/layers/MaxPooling2D",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_losses_binary_crossentropy",
+				Function:       "tf.keras.losses.BinaryCrossentropy",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/losses/BinaryCrossentropy",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_losses_categorical_crossentropy",
+				Function:       "tf.keras.losses.CategoricalCrossentropy",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/losses/CategoricalCrossentropy",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_losses_mean_squared_error",
+				Function:       "tf.keras.losses.MeanSquaredError",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/losses/MeanSquaredError",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_losses_sparse_categorical_crossentropy",
+				Function:       "tf.keras.losses.SparseCategoricalCrossentropy",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/losses/SparseCategoricalCrossentropy",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_metrics_accuracy",
+				Function:       "tf.keras.metrics.Accuracy",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/metrics/Accuracy",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_metrics_auc",
+				Function:       "tf.keras.metrics.AUC",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/metrics/AUC",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_metrics_binary_accuracy",
+				Function:       "tf.keras.metrics.BinaryAccuracy",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/metrics/BinaryAccuracy",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_metrics_categorical_accuracy",
+				Function:       "tf.keras.metrics.CategoricalAccuracy",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/metrics/CategoricalAccuracy",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_metrics_mean",
+				Function:       "tf.keras.metrics.Mean",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/metrics/Mean",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_metrics_sparse_categorical_accuracy",
+				Function:       "tf.keras.metrics.SparseCategoricalAccuracy",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/metrics/SparseCategoricalAccuracy",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_model",
+				Function:       "tf.keras.Model",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/Model",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_optimizers_adam",
+				Function:       "tf.keras.optimizers.Adam",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/Adam",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_optimizers_rmsprop",
+				Function:       "tf.keras.optimizers.RMSprop",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/RMSprop",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_optimizers_sgd",
+				Function:       "tf.keras.optimizers.SGD",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/SGD",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "keras_sequential",
+				Function:       "tf.keras.Sequential",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/keras/Sequential",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
 				TypeNameSuffix: "linspace",
 				Function:       "tf.linspace",
 				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/linspace",

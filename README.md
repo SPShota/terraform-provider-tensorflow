@@ -16,6 +16,9 @@ It also includes generated wrappers for an initial TensorFlow tensor/array/math
 subset, such as `tensorflow_constant`, `tensorflow_reshape`, and
 `tensorflow_math_reduce_sum`, plus block helpers for functions and context
 managers such as `tensorflow_function` and `tensorflow_with`.
+Keras wrappers such as `tensorflow_keras_sequential`,
+`tensorflow_keras_layers_dense`, and `tensorflow_keras_optimizers_adam` are also
+available.
 
 Generated code can be written to disk with Terraform resources such as
 `local_file`.

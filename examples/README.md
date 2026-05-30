@@ -8,6 +8,7 @@ The examples show progressively richer ways to generate TensorFlow Python code.
 | [program](program) | Direct `tensorflow_program` usage with raw statements. |
 | [expressions](expressions) | Expression data sources feeding `tensorflow_program`. |
 | [generated-wrappers](generated-wrappers) | Generated TensorFlow wrapper data sources. |
+| [keras](keras) | Keras Sequential model, compile, and summary generation. |
 | [blocks](blocks) | Function definitions, `tf.function`, and `tf.GradientTape` blocks. |
 | [basic](basic) | End-to-end source generation into `generated.py`. |
 
