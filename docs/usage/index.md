@@ -54,3 +54,12 @@ go build -o bin/terraform-provider-tensorflow
 
 After that, examples can be evaluated with `terraform plan` or
 `terraform apply`.
+
+## Validation Commands
+
+```sh
+go test ./...
+TF_TF_INTEGRATION=1 go test ./internal/integration/...
+```
+
+The integration command requires TensorFlow to be installed for `python3`.
