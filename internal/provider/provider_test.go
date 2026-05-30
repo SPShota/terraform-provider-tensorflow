@@ -44,18 +44,31 @@ func TestProviderDataSources(t *testing.T) {
 	p := New("test")()
 	dataSources := p.DataSources(context.Background())
 
-	if len(dataSources) != 1 {
-		t.Fatalf("expected 1 data source, got %d", len(dataSources))
+	if len(dataSources) != 6 {
+		t.Fatalf("expected 6 data sources, got %d", len(dataSources))
 	}
 
 	var resp provider.MetadataResponse
 	p.Metadata(context.Background(), provider.MetadataRequest{}, &resp)
 
-	ds := dataSources[0]()
-	var dsResp datasource.MetadataResponse
-	ds.Metadata(context.Background(), datasource.MetadataRequest{ProviderTypeName: resp.TypeName}, &dsResp)
+	got := make(map[string]struct{}, len(dataSources))
+	for _, newDataSource := range dataSources {
+		ds := newDataSource()
+		var dsResp datasource.MetadataResponse
+		ds.Metadata(context.Background(), datasource.MetadataRequest{ProviderTypeName: resp.TypeName}, &dsResp)
+		got[dsResp.TypeName] = struct{}{}
+	}
 
-	if dsResp.TypeName != "tensorflow_program" {
-		t.Fatalf("expected tensorflow_program data source, got %q", dsResp.TypeName)
+	for _, name := range []string{
+		"tensorflow_literal",
+		"tensorflow_ref",
+		"tensorflow_attr",
+		"tensorflow_call",
+		"tensorflow_assign",
+		"tensorflow_program",
+	} {
+		if _, ok := got[name]; !ok {
+			t.Fatalf("expected %q data source to be registered; got %#v", name, got)
+		}
 	}
 }

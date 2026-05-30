@@ -1,6 +1,7 @@
 package python
 
 import (
+	"encoding/json"
 	"fmt"
 	"math"
 	"reflect"
@@ -46,6 +47,11 @@ func literalCode(value any) (string, error) {
 		return finiteFloat(float64(v), 32)
 	case float64:
 		return finiteFloat(v, 64)
+	case json.Number:
+		if _, err := v.Float64(); err != nil {
+			return "", fmt.Errorf("invalid JSON number literal %q", v)
+		}
+		return v.String(), nil
 	case []any:
 		return sequenceLiteral("[", "]", v)
 	case map[string]any:
