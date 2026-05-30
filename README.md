@@ -2,8 +2,8 @@
 
 TF.tf is a Terraform provider for generating TensorFlow Python programs from HCL.
 
-The current implementation provides a small expression system for building
-TensorFlow Python code:
+The provider exposes a small expression system for building TensorFlow Python
+code:
 
 - `tensorflow_literal`
 - `tensorflow_ref`
@@ -27,6 +27,20 @@ Raw TensorFlow ops are available through `tensorflow_raw_op`.
 
 Generated code can be written to disk with Terraform resources such as
 `local_file`.
+
+## Current Scope
+
+TF.tf currently supports:
+
+- Generic Python expressions, statements, calls, assignments, functions, and
+  `with` blocks.
+- Generated wrappers for an initial TensorFlow API subset across tensor/array,
+  math, Keras, `tf.data`, `tf.random`, `tf.image`, `tf.io`, `tf.audio`,
+  `tf.strings`, `tf.sparse`, and `tf.ragged` namespaces.
+- Generic `tf.raw_ops` calls through `tensorflow_raw_op`.
+- Manifest generation and API coverage reporting.
+
+See [docs/usage/index.md](docs/usage/index.md) for the full usage guide.
 
 ## Usage
 
@@ -64,8 +78,19 @@ x = tf.constant([1, 2, 3])
 print(tf.reduce_sum(x))
 ```
 
-See [docs/usage/index.md](docs/usage/index.md) and
-[examples/basic](examples/basic) for the full flow.
+See [examples/basic](examples/basic) for the full file-generation flow.
+
+## Documentation
+
+- [Usage Guide](docs/usage/index.md)
+- [Examples](examples)
+- [Generated Wrappers](docs/usage/generated-wrappers.md)
+- [Keras](docs/usage/keras.md)
+- [`tf.data`](docs/usage/data.md)
+- [Raw Ops](docs/usage/raw-ops.md)
+- [API Coverage](docs/usage/coverage.md)
+- [CLI Tools](docs/usage/cli.md)
+- [Limitations](docs/usage/limitations.md)
 
 ## Development
 
@@ -127,15 +152,15 @@ go run .
 Terraform provider binaries are not meant to be executed directly, so a successful
 compile exits with Terraform plugin startup guidance.
 
-## Roadmap
+## Coverage Policy
 
-The planned implementation proceeds in small PRs:
+TF.tf aims to make every TensorFlow API expressible. Dedicated generated
+wrappers are added incrementally, while `tensorflow_call` and
+`tensorflow_raw_op` provide escape hatches for APIs without wrappers yet.
 
-1. Provider scaffold, CI, and README.
-2. Python code-generation IR.
-3. `tf_program` data source.
-4. Generic expression and call data sources.
-5. Usage documentation and examples.
+Use the coverage CLI to compare an API manifest with the provider's registered
+wrappers:
 
-Later PRs will add generated wrappers for TensorFlow APIs from the official
-`tf` namespace documentation.
+```sh
+go run ./cmd/tftf-coverage report -input tf-manifest.json -output coverage.md
+```
