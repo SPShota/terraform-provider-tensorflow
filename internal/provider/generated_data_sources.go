@@ -71,6 +71,13 @@ func GeneratedDataSources() []func() datasource.DataSource {
 		},
 		func() datasource.DataSource {
 			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "gradient_tape",
+				Function:       "tf.GradientTape",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/GradientTape",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
 				TypeNameSuffix: "linspace",
 				Function:       "tf.linspace",
 				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/linspace",
@@ -176,6 +183,13 @@ func GeneratedDataSources() []func() datasource.DataSource {
 		},
 		func() datasource.DataSource {
 			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "module",
+				Function:       "tf.Module",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/Module",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
 				TypeNameSuffix: "ones",
 				Function:       "tf.ones",
 				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/ones",
@@ -256,6 +270,13 @@ func GeneratedDataSources() []func() datasource.DataSource {
 				TypeNameSuffix: "unstack",
 				Function:       "tf.unstack",
 				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/unstack",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "variable",
+				Function:       "tf.Variable",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/Variable",
 			})
 		},
 		func() datasource.DataSource {

@@ -57,7 +57,9 @@ Tensor and array wrappers:
 - `tensorflow_fill`
 - `tensorflow_gather`
 - `tensorflow_gather_nd`
+- `tensorflow_gradient_tape`
 - `tensorflow_linspace`
+- `tensorflow_module`
 - `tensorflow_ones`
 - `tensorflow_ones_like`
 - `tensorflow_range`
@@ -70,6 +72,7 @@ Tensor and array wrappers:
 - `tensorflow_stack`
 - `tensorflow_transpose`
 - `tensorflow_unstack`
+- `tensorflow_variable`
 - `tensorflow_where`
 - `tensorflow_zeros`
 - `tensorflow_zeros_like`
