@@ -43,6 +43,55 @@ func GeneratedDataSources() []func() datasource.DataSource {
 		},
 		func() datasource.DataSource {
 			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "data_dataset_from_generator",
+				Function:       "tf.data.Dataset.from_generator",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/data/Dataset#from_generator",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "data_dataset_from_tensor_slices",
+				Function:       "tf.data.Dataset.from_tensor_slices",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/data/Dataset#from_tensor_slices",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "data_dataset_from_tensors",
+				Function:       "tf.data.Dataset.from_tensors",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/data/Dataset#from_tensors",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "data_dataset_list_files",
+				Function:       "tf.data.Dataset.list_files",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/data/Dataset#list_files",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "data_dataset_range",
+				Function:       "tf.data.Dataset.range",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/data/Dataset#range",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "data_dataset_zip",
+				Function:       "tf.data.Dataset.zip",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/data/Dataset#zip",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "data_tf_record_dataset",
+				Function:       "tf.data.TFRecordDataset",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/data/TFRecordDataset",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
 				TypeNameSuffix: "expand_dims",
 				Function:       "tf.expand_dims",
 				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/expand_dims",

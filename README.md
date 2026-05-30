@@ -19,6 +19,8 @@ managers such as `tensorflow_function` and `tensorflow_with`.
 Keras wrappers such as `tensorflow_keras_sequential`,
 `tensorflow_keras_layers_dense`, and `tensorflow_keras_optimizers_adam` are also
 available.
+Dataset creation wrappers such as `tensorflow_data_dataset_from_tensor_slices`
+are available for `tf.data` pipelines.
 
 Generated code can be written to disk with Terraform resources such as
 `local_file`.
