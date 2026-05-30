@@ -21,6 +21,8 @@ Keras wrappers such as `tensorflow_keras_sequential`,
 available.
 Dataset creation wrappers such as `tensorflow_data_dataset_from_tensor_slices`
 are available for `tf.data` pipelines.
+Additional namespace wrappers are available for `tf.random`, `tf.image`,
+`tf.io`, `tf.audio`, `tf.strings`, `tf.sparse`, and `tf.ragged`.
 
 Generated code can be written to disk with Terraform resources such as
 `local_file`.

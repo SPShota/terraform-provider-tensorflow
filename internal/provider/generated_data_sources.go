@@ -8,6 +8,20 @@ func GeneratedDataSources() []func() datasource.DataSource {
 	return []func() datasource.DataSource{
 		func() datasource.DataSource {
 			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "audio_decode_wav",
+				Function:       "tf.audio.decode_wav",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/audio/decode_wav",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "audio_encode_wav",
+				Function:       "tf.audio.encode_wav",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/audio/encode_wav",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
 				TypeNameSuffix: "boolean_mask",
 				Function:       "tf.boolean_mask",
 				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/boolean_mask",
@@ -123,6 +137,104 @@ func GeneratedDataSources() []func() datasource.DataSource {
 				TypeNameSuffix: "gradient_tape",
 				Function:       "tf.GradientTape",
 				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/GradientTape",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "image_adjust_brightness",
+				Function:       "tf.image.adjust_brightness",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/image/adjust_brightness",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "image_convert_image_dtype",
+				Function:       "tf.image.convert_image_dtype",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/image/convert_image_dtype",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "image_crop_to_bounding_box",
+				Function:       "tf.image.crop_to_bounding_box",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/image/crop_to_bounding_box",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "image_decode_image",
+				Function:       "tf.image.decode_image",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/image/decode_image",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "image_flip_left_right",
+				Function:       "tf.image.flip_left_right",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/image/flip_left_right",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "image_random_flip_left_right",
+				Function:       "tf.image.random_flip_left_right",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/image/random_flip_left_right",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "image_resize",
+				Function:       "tf.image.resize",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/image/resize",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "io_decode_csv",
+				Function:       "tf.io.decode_csv",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/io/decode_csv",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "io_decode_json_example",
+				Function:       "tf.io.decode_json_example",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/io/decode_json_example",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "io_decode_raw",
+				Function:       "tf.io.decode_raw",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/io/decode_raw",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "io_encode_base64",
+				Function:       "tf.io.encode_base64",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/io/encode_base64",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "io_parse_example",
+				Function:       "tf.io.parse_example",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/io/parse_example",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "io_read_file",
+				Function:       "tf.io.read_file",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/io/read_file",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "io_write_file",
+				Function:       "tf.io.write_file",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/io/write_file",
 			})
 		},
 		func() datasource.DataSource {
@@ -456,6 +568,62 @@ func GeneratedDataSources() []func() datasource.DataSource {
 		},
 		func() datasource.DataSource {
 			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "ragged_boolean_mask",
+				Function:       "tf.ragged.boolean_mask",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/ragged/boolean_mask",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "ragged_constant",
+				Function:       "tf.ragged.constant",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/ragged/constant",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "ragged_map_flat_values",
+				Function:       "tf.ragged.map_flat_values",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/ragged/map_flat_values",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "random_categorical",
+				Function:       "tf.random.categorical",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/random/categorical",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "random_normal",
+				Function:       "tf.random.normal",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/random/normal",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "random_set_seed",
+				Function:       "tf.random.set_seed",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/random/set_seed",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "random_shuffle",
+				Function:       "tf.random.shuffle",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/random/shuffle",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "random_uniform",
+				Function:       "tf.random.uniform",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/random/uniform",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
 				TypeNameSuffix: "reshape",
 				Function:       "tf.reshape",
 				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/reshape",
@@ -484,6 +652,48 @@ func GeneratedDataSources() []func() datasource.DataSource {
 		},
 		func() datasource.DataSource {
 			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "sparse_add",
+				Function:       "tf.sparse.add",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/sparse/add",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "sparse_concat",
+				Function:       "tf.sparse.concat",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/sparse/concat",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "sparse_reorder",
+				Function:       "tf.sparse.reorder",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/sparse/reorder",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "sparse_reshape",
+				Function:       "tf.sparse.reshape",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/sparse/reshape",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "sparse_reset_shape",
+				Function:       "tf.sparse.reset_shape",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/sparse/reset_shape",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "sparse_to_dense",
+				Function:       "tf.sparse.to_dense",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/sparse/to_dense",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
 				TypeNameSuffix: "squeeze",
 				Function:       "tf.squeeze",
 				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/squeeze",
@@ -494,6 +704,62 @@ func GeneratedDataSources() []func() datasource.DataSource {
 				TypeNameSuffix: "stack",
 				Function:       "tf.stack",
 				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/stack",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "strings_join",
+				Function:       "tf.strings.join",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/strings/join",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "strings_length",
+				Function:       "tf.strings.length",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/strings/length",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "strings_lower",
+				Function:       "tf.strings.lower",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/strings/lower",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "strings_regex_replace",
+				Function:       "tf.strings.regex_replace",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/strings/regex_replace",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "strings_split",
+				Function:       "tf.strings.split",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/strings/split",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "strings_strip",
+				Function:       "tf.strings.strip",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/strings/strip",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "strings_to_number",
+				Function:       "tf.strings.to_number",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/strings/to_number",
+			})
+		},
+		func() datasource.DataSource {
+			return NewWrapperDataSource(WrapperDataSourceSpec{
+				TypeNameSuffix: "strings_upper",
+				Function:       "tf.strings.upper",
+				DocURL:         "https://www.tensorflow.org/api_docs/python/tf/strings/upper",
 			})
 		},
 		func() datasource.DataSource {

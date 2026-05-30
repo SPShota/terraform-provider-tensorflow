@@ -11,8 +11,8 @@ func TestGeneratedDataSources(t *testing.T) {
 	t.Parallel()
 
 	dataSources := GeneratedDataSources()
-	if len(dataSources) != 76 {
-		t.Fatalf("len(GeneratedDataSources()) = %d, want 76", len(dataSources))
+	if len(dataSources) != 114 {
+		t.Fatalf("len(GeneratedDataSources()) = %d, want 114", len(dataSources))
 	}
 
 	got := make(map[string]struct{}, len(dataSources))
@@ -50,6 +50,19 @@ func TestGeneratedDataSources(t *testing.T) {
 		"tensorflow_data_dataset_zip",
 		"tensorflow_data_dataset_list_files",
 		"tensorflow_data_tf_record_dataset",
+		"tensorflow_random_normal",
+		"tensorflow_random_uniform",
+		"tensorflow_image_resize",
+		"tensorflow_image_decode_image",
+		"tensorflow_io_read_file",
+		"tensorflow_io_parse_example",
+		"tensorflow_audio_decode_wav",
+		"tensorflow_strings_split",
+		"tensorflow_strings_to_number",
+		"tensorflow_sparse_to_dense",
+		"tensorflow_sparse_reorder",
+		"tensorflow_ragged_constant",
+		"tensorflow_ragged_map_flat_values",
 		"tensorflow_zeros",
 		"tensorflow_ones",
 	} {
