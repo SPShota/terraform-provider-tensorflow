@@ -84,6 +84,13 @@ TF_TF_INTEGRATION=1 go test ./internal/integration/...
 
 This imports TensorFlow from `python3` and executes a generated program.
 
+Generate a TensorFlow API manifest from an installed TensorFlow Python
+environment:
+
+```sh
+go run ./cmd/tftf-manifest generate -output tf-manifest.json
+```
+
 Run the provider directly to verify that it compiles:
 
 ```sh
