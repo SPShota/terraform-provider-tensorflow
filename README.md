@@ -90,6 +90,7 @@ See [examples/basic](examples/basic) for the full file-generation flow.
 - [Raw Ops](docs/usage/raw-ops.md)
 - [API Coverage](docs/usage/coverage.md)
 - [CLI Tools](docs/usage/cli.md)
+- [Release](docs/usage/release.md)
 - [Limitations](docs/usage/limitations.md)
 
 ## Development
