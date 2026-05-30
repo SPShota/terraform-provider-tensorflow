@@ -94,4 +94,6 @@ Math wrappers:
 - `tensorflow_math_square`
 - `tensorflow_math_subtract`
 
+Keras wrappers are documented separately in [Keras](keras.md).
+
 Use `tensorflow_call` for APIs that do not have generated wrappers yet.
