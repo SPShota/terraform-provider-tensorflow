@@ -36,7 +36,7 @@ func (p *tensorflowProvider) Configure(_ context.Context, _ provider.ConfigureRe
 }
 
 func (p *tensorflowProvider) DataSources(_ context.Context) []func() datasource.DataSource {
-	return []func() datasource.DataSource{
+	dataSources := []func() datasource.DataSource{
 		NewLiteralDataSource,
 		NewRefDataSource,
 		NewAttrDataSource,
@@ -44,6 +44,8 @@ func (p *tensorflowProvider) DataSources(_ context.Context) []func() datasource.
 		NewAssignDataSource,
 		NewProgramDataSource,
 	}
+
+	return append(dataSources, GeneratedDataSources()...)
 }
 
 func (p *tensorflowProvider) Resources(_ context.Context) []func() resource.Resource {

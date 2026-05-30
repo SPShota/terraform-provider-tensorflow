@@ -44,8 +44,9 @@ func TestProviderDataSources(t *testing.T) {
 	p := New("test")()
 	dataSources := p.DataSources(context.Background())
 
-	if len(dataSources) != 6 {
-		t.Fatalf("expected 6 data sources, got %d", len(dataSources))
+	expectedCount := 6 + len(GeneratedDataSources())
+	if len(dataSources) != expectedCount {
+		t.Fatalf("expected %d data sources, got %d", expectedCount, len(dataSources))
 	}
 
 	var resp provider.MetadataResponse
@@ -66,6 +67,9 @@ func TestProviderDataSources(t *testing.T) {
 		"tensorflow_call",
 		"tensorflow_assign",
 		"tensorflow_program",
+		"tensorflow_constant",
+		"tensorflow_reshape",
+		"tensorflow_math_reduce_sum",
 	} {
 		if _, ok := got[name]; !ok {
 			t.Fatalf("expected %q data source to be registered; got %#v", name, got)
