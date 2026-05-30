@@ -91,6 +91,14 @@ environment:
 go run ./cmd/tftf-manifest generate -output tf-manifest.json
 ```
 
+Generate provider wrapper source from a manifest:
+
+```sh
+go run ./cmd/tftf-wrappergen generate \
+  -input tf-manifest.json \
+  -output internal/provider/generated_data_sources.go
+```
+
 Run the provider directly to verify that it compiles:
 
 ```sh
